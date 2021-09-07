@@ -10,33 +10,26 @@ The main requirements are:
 - bert4keras
 
 ## Usage
-0. **Get pre-trained BERT model**
-
+* **Get pre-trained BERT model**
 Download [BERT-BASE-CASED](https://huggingface.co/bert-base-cased) and put it under `./pretrained`.
 
-1. **Train and select the model**
-
+* **Train and select the model**
+```
 python run.py --dataset=WebNLG  --train=train  --rounds=4
-
 python run.py --dataset=WebNLG_star   --train=train  --rounds=2
-
 python run.py --dataset=NYT24   --train=train  --rounds=3
-
 python run.py --dataset=NYT24_star   --train=train  --rounds=2
-
 python run.py --dataset=NYT29   --train=train  --rounds=3
+```
 
-2. **Evaluate on the test set**
-
+* **Evaluate on the test set**
+```
 python run.py --dataset=WebNLG  --train=test  --rounds=4
-
 python run.py --dataset=WebNLG_star   --train=test  --rounds=2
-
 python run.py --dataset=NYT24   --train=test  --rounds=3
-
 python run.py --dataset=NYT24_star   --train=test  --rounds=2
-
 python run.py --dataset=NYT29   --train=test  --rounds=3
+```
 
 ### Acknowledgement
 Parts of our codes come from [bert4keras](https://github.com/bojone/bert4keras).
